@@ -5,32 +5,31 @@
       function Student(name)
       {
         this.name=name;
-        this.subjects=new Array(Math.random()*100,Math.random()*100,Math.random()*100);
+        this.subjects=new Array(Math.floor(Math.random()*100)+1),(Math.floor(Math.random()*100)+1),(Math.floor(Math.random()*100))+1);
       }
       var stu1=new Student("Aksahy");
       var stu2=new Student("Bhanu");
       var stu3=new Student("sairaj");
       var stu4=new Student("suraj");
       var stu5=new Student("sujith");
-      stu1.avg1();
-      stu2.avg2();
-      stu3.avg3();
-      stu4.avg4();
-      stu5.avg5();
-      average();
-      function(){
+      var sum=0;
+      var avg=0;
+      function total(){
          var total1=stu1.subject[0]+stu1.subject[1]+stu1.subject[2];
          var total2=stu2.subject[0]+stu2.subject[1]+stu2.subject[2];
          var total3=stu3.subject[0]+stu3.subject[1]+stu3.subject[2];
          var total4=stu4.subject[0]+stu4.subject[1]+stu4.subject[2];
          var total5=stu5.subject[0]+stu5.subject[1]+stu5.subject[2];
-        avg1=total1/3;
-        avg2=total2/3;
-        avg3=total3/3;
-        avg4=total4/3;
-        avg5=total5/3;
-        Student.sort();
-      }
+       }
+       total();
+       function avg(){
+         var avg1=total1/3;
+         var avg2=total2/3;
+         var avg3=total3/3;
+         var avg4=total4/3;
+         var avg5=total5/3;
+       }
+      avg();
        <body>
     </body>
       
