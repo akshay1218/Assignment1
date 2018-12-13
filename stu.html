@@ -37,6 +37,10 @@
       document.write("sorted total marks are");
       for(var i=0;i<Student.length;i++)
         document.write(Student[i].name+"\t"+stutot[i]+"<br>"+"<br>");
+       document.write("sorting of names");
+        document.write("<br>"+"<br>");
+        for(var i=0;i<Student.length;i++)
+          document.write(stu[i]+"<br>"+"<br>");
        Student.sort(function(a,b){
           if(a.name>b.name)
             return 1;
