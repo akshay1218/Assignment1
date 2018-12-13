@@ -15,28 +15,38 @@
       var stu5=new Student("sujith");
       var sum=0;
       var avg=0;
-      function total(){
-         var total1=stu1.subject[0]+stu1.subject[1]+stu1.subject[2];
-         var total2=stu2.subject[0]+stu2.subject[1]+stu2.subject[2];
-         var total3=stu3.subject[0]+stu3.subject[1]+stu3.subject[2];
-         var total4=stu4.subject[0]+stu4.subject[1]+stu4.subject[2];
-         var total5=stu5.subject[0]+stu5.subject[1]+stu5.subject[2];
+      Array(stu1,stu2,stu3,stu4,stu5);
+      var stuavg=new Array(3);
+      var stutot=new Array(3);
+      var stu=new Array(3);
+       for(var i=0;i<Student.length;i++)
+       {
+         for(var j=0;sum=0;j<3;j++)
+         {
+           sum+=Student[i].subjects;
+           stu[i]=Student[i].name;
+         }
+         avg=sum/3;
+         stuavg.push(avg);
+         stutot.push(sum);
        }
-       total();
-      display(total);
-              function avg(){
-         var avg1=total1/3;
-         var avg2=total2/3;
-         var avg3=total3/3;
-         var avg4=total4/3;
-         var avg5=total5/3;
-       }
-      avg();
-      dispaly(avg);
-          <body>
-    </body>
-      
-    </script>  
+      stuavg.sort((a,b)=>a-b);
+      stutot.sort((a,b)=>a-b);
+      document.write("sorted average marks are");
+      document.write("<br>"+"<br>");
+      for(var i=0;i<Student.length;i++)
+      {
+        document.write("sorted total marks are");
+        document.write(Student[i].name+"\t"+stutot[i]+"<br>"+"<br>");
+        Student.sort(function(a,b){
+          if(a.name>b.name)
+            return 1;
+          else if(a.name<b.name)
+            return -1;
+          else 
+            return 0;
+        });
+        </script>  
   </head>
 </html>
 
